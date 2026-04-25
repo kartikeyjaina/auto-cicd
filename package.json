@@ -1,0 +1,24 @@
+{
+  "name": "deploy-platform",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "backend",
+    "worker",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,worker,frontend -c green,blue,magenta \"npm:dev:backend\" \"npm:dev:worker\" \"npm:dev:frontend\"",
+    "dev:backend": "npm run dev -w backend",
+    "dev:worker": "npm run dev -w worker",
+    "dev:frontend": "npm run dev -w frontend",
+    "build": "npm run build -w frontend",
+    "start": "concurrently -n backend,worker,frontend -c green,blue,magenta \"npm:start:backend\" \"npm:start:worker\" \"npm:start:frontend\"",
+    "start:backend": "npm run start -w backend",
+    "start:worker": "npm run start -w worker",
+    "start:frontend": "npm run preview -w frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

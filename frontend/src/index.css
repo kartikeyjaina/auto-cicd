@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #f5efe2;
+  background:
+    radial-gradient(circle at top, rgba(25, 184, 160, 0.18), transparent 40%),
+    linear-gradient(180deg, #162028 0%, #101417 60%);
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #f5efe2;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.panel {
+  @apply rounded-lg border border-white/10 bg-white/5 backdrop-blur;
+}
+
+.input {
+  @apply w-full rounded-md border border-white/10 bg-ink-900/80 px-3 py-2 text-sand-100 outline-none transition focus:border-sea-400;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-md bg-sea-500 px-4 py-2 font-medium text-ink-950 transition hover:bg-sea-400 disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-md border border-white/10 bg-white/5 px-4 py-2 font-medium text-sand-100 transition hover:bg-white/10;
+}
+
+.status-pill {
+  @apply inline-flex rounded-full px-2 py-1 text-xs font-semibold uppercase tracking-wide;
+}

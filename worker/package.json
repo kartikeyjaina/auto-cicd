@@ -1,0 +1,15 @@
+{
+  "name": "@deploy-platform/worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "bullmq": "^5.58.5",
+    "dotenv": "^16.4.7",
+    "mongoose": "^8.9.5"
+  }
+}
